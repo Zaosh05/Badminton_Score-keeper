@@ -1,0 +1,230 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background-image: url('Badminton_flatlay.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: cover;
+}
+
+.wrapper{
+  background: #220044;
+  color: #fff;
+  padding: 10px;
+  border: 4px solid #FDD835;
+  width: 600px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.wrapper .top{
+  display: flex;
+}
+
+.wrapper .top .title{
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 5px;
+  border-radius: 20px;
+  width: 80%;
+}
+
+.wrapper .top_right{
+  width: 20%;
+}
+
+.wrapper .top_right .take_input select{
+  width: 100%;
+  margin: 3px;
+  font-size: 0.77em;
+  cursor: pointer;
+}
+
+.wrapper .bottom{
+  display: flex;
+}
+
+.wrapper .bottom svg{
+  cursor: pointer;
+}
+
+.wrapper .bottom .plus svg{
+  fill: #fff;
+  width: 150px;
+}
+
+.wrapper .bottom .minus svg{
+  fill: #111;
+  width: 75px;
+}
+
+.wrapper .bottom .left, .wrapper .bottom .right{
+  width: 50%;
+  padding: 10px;
+  margin: 5px;
+  border: 4px solid #FDD835;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  grid-template-rows: 50% 50%;
+}
+
+.wrapper .bottom .left{
+  background: #FF1744;
+}
+
+.wrapper .bottom .right{
+  background: #2962FF;
+}
+
+.wrapper .bottom .left .plus{
+  grid-row: 1 / 3;
+  grid-column: 1 / 3;
+}
+
+.wrapper .bottom .left .minus{
+  grid-row: 2;
+  grid-column: 3;
+}
+
+.wrapper .bottom .left .scores{
+  grid-row: 1;
+  grid-column: 3;
+}
+
+.wrapper .bottom .right .plus{
+  grid-row: 1 / 3;
+  grid-column: 2 / 4;
+}
+
+.wrapper .bottom .right .minus{
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.wrapper .bottom .right .scores{
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.wrapper .bottom .scores{
+  text-align: center;
+  font-size: 4em;
+}
+
+.wrapper .last_line{
+  display: flex;
+}
+
+.wrapper .last_line .show_total{
+  width: 40%;
+  font-size: 1.4em;
+  padding-left: 10px;
+}
+
+.wrapper .last_line .show_total #total_score{
+  font-size: 1.4em;
+}
+
+.wrapper .last_line .reset_button{
+  width: 20%;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.wrapper .last_line .reset_button #reset{
+  color: #fff;
+  padding: 5px 10px;
+  background-color: #00C853;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.wrapper .last_line .credits{
+  width: 40%;
+  text-align: right;
+  font-size: 0.75em;
+  padding-top: 20px;
+}
+
+@media screen and (min-width: 470px){
+  .wrapper .top #line_break{
+    display: none;
+  }
+  
+  .wrapper .last_line .credits #line_break2{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 620px){
+  .wrapper{
+    width: 95%;
+  }
+  
+  .wrapper .top{
+    flex-direction: column;
+  }
+  
+  .wrapper .top .title{
+    width: 98%;
+  }
+  
+  .wrapper .top .top_right{
+    width: 100%;
+    display: flex;
+  }
+  
+  .wrapper .top .top_right .take_input{
+    width: 50%;
+    margin: 2px 4px;
+    text-align: center;
+  }
+  
+  .wrapper .top .top_right .take_input select{
+    width: 95%;
+    font-size: 0.8em;
+    padding: 2px;
+  }
+  
+  .wrapper .bottom{
+    flex-direction: column;
+  }
+  
+  .wrapper .bottom .left, .wrapper .bottom .right{
+    width: 98%;
+    text-align: center;
+  }
+  
+  .wrapper .bottom .left .plus{
+    grid-row: 1 / 3;
+    grid-column: 2 / 4;
+  }
+
+  .wrapper .bottom .left .minus{
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  .wrapper .bottom .left .scores{
+    grid-row: 1;
+    grid-column: 1;
+  }
+}

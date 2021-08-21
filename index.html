@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Badminton Score-keeper</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+<!-- partial:index.partial.html -->
+<div class="wrapper">
+  <div class="top">
+    <div class="title">Badminton <br id="line_break">Score-keeper
+      <div id="winning_text"></div>
+    </div>
+    <div class="top_right">
+      <div class="take_input">
+        <select name="score_selector" id="score_selector" data-selected="">
+          <option value="" selected="selected" disabled="disabled">Total Score (21)</option>
+          <option value="1">1 Total</option>
+          <option value="2">2 Total</option>
+          <option value="3">3 Total</option>
+          <option value="4">4 Total</option>
+          <option value="5">5 Total</option>
+          <option value="6">6 Total</option>
+          <option value="7">7 Total</option>
+          <option value="8">8 Total</option>
+          <option value="9">9 Total</option>
+          <option value="10">10 Total</option>
+          <option value="11">11 Total</option>
+          <option value="12">12 Total</option>
+          <option value="13">13 Total</option>
+          <option value="14">14 Total</option>
+          <option value="15">15 Total</option>
+          <option value="16">16 Total</option>
+          <option value="17">17 Total</option>
+          <option value="18">18 Total</option>
+          <option value="19">19 Total</option>
+          <option value="20">20 Total</option>
+          <option value="21">21 Total</option>
+          <option value="22">22 Total</option>
+          <option value="23">23 Total</option>
+          <option value="24">24 Total</option>
+          <option value="25">25 Total</option>
+          <option value="26">26 Total</option>
+          <option value="27">27 Total</option>
+          <option value="28">28 Total</option>
+          <option value="29">29 Total</option>
+          <option value="30">30 Total</option>
+          <option value="31">31 Total</option>
+          <option value="32">32 Total</option>
+          <option value="33">33 Total</option>
+          <option value="34">34 Total</option>
+          <option value="35">35 Total</option>
+          <option value="36">36 Total</option>
+          <option value="37">37 Total</option>
+          <option value="38">38 Total</option>
+          <option value="39">39 Total</option>
+          <option value="40">40 Total</option>
+          <option value="41">41 Total</option>
+          <option value="42">42 Total</option>
+          <option value="43">43 Total</option>
+          <option value="44">44 Total</option>
+          <option value="45">45 Total</option>
+          <option value="46">46 Total</option>
+          <option value="47">47 Total</option>
+          <option value="48">48 Total</option>
+          <option value="49">49 Total</option>
+          <option value="50">50 Total</option>
+          <option value="51">51 Total</option>
+        </select>
+      </div>
+      <div class="take_input">
+        <select name="deuce_selector" id="deuce_selector" data-selected="">
+          <option value="" selected="selected" disabled="disabled">Deuces (9)</option>
+          <option value="0">0 Deuce</option>
+          <option value="1">1 Deuce</option>
+          <option value="2">2 Deuces</option>
+          <option value="3">3 Deuces</option>
+          <option value="4">4 Deuces</option>
+          <option value="5">5 Deuces</option>
+          <option value="6">6 Deuces</option>
+          <option value="7">7 Deuces</option>
+          <option value="8">8 Deuces</option>
+          <option value="9">9 Deuces</option>
+          <option value="10">10 Deuces</option>
+          <option value="11">11 Deuces</option>
+          <option value="12">12 Deuces</option>
+          <option value="13">13 Deuces</option>
+          <option value="14">14 Deuces</option>
+          <option value="15">15 Deuces</option>
+          <option value="16">16 Deuces</option>
+          <option value="17">17 Deuces</option>
+          <option value="18">18 Deuces</option>
+          <option value="19">19 Deuces</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="left">
+      <div class="plus" id="plus_red">
+        <svg viewBox="0 0 448 512" title="plus-square">
+          <path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-32 252c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92H92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z" />
+        </svg>
+      </div>
+      <div class="scores" id="score_red">0</div>
+      <div class="minus" id="minus_red">
+        <svg viewBox="0 0 448 512" title="minus-square">
+          <path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM92 296c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h264c6.6 0 12 5.4 12 12v56c0 6.6-5.4 12-12 12H92z" />
+        </svg>
+      </div>
+    </div>
+    <div class="right">
+      <div class="scores" id="score_blue">0</div>
+      <div class="minus" id="minus_blue">
+        <svg viewBox="0 0 448 512" title="minus-square">
+          <path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM92 296c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h264c6.6 0 12 5.4 12 12v56c0 6.6-5.4 12-12 12H92z" />
+        </svg>
+      </div>
+      <div class="plus" id="plus_blue">
+        <svg viewBox="0 0 448 512" title="plus-square">
+          <path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-32 252c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92H92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z" />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="last_line">
+    <div class="show_total">Total: <span id="total_score">21</span></div>
+    <div class="reset_button"><button type="button" id="reset">Reset</button></div>
+    <div class="credits">Developed by: <br id="line_break2">Zaosh Damania</div>
+  </div>
+</div>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
